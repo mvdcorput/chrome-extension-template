@@ -1,0 +1,24 @@
+{
+  "name": "cs-chrome-extension",
+  "version": "0.0.1",
+  "author": "Martijn van der Corput",
+  "scripts": {
+    "copy:images": "cpx ./images/**/*.* ../dist/images",
+    "copy:html": "cpx ./*.html ../dist",
+    "copy:chrome-manifest": "cpx ./manifest.json ../dist",
+    "build": "tsc && npm run copy:chrome-manifest && npm run copy:html && npm run copy:images"
+  },
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chrome": "0.0.81",
+    "cpx": "^1.5.0",
+    "tslib": "^1.9.0",
+    "tslint": "~5.11.0",
+    "typescript": "~3.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mvdcorput/cs-chrome-extension.git"
+  }
+}
